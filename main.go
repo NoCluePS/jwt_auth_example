@@ -19,11 +19,9 @@ func intro(c *fiber.Ctx) error {
 
 func setupRoutes(app *fiber.App) {
 	app.Get("/", intro)
-	app.Get("/users", routes.GetUsers)
 	app.Post("/login", routes.Login)
 	app.Post("/register", routes.Register)
-	app.Get("/private", routes.Private)
-	app.Get("/public", routes.Public)
+	app.Get("/user", routes.GetUser)
 } 
 
 func main() {
